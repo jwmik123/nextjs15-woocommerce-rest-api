@@ -2,6 +2,12 @@
 
 A modern, high-performance e-commerce template built with Next.js 15, integrating WooCommerce REST API, WordPress GraphQL, and Mollie Payments. Perfect for businesses looking to combine the power of WordPress content management with Next.js frontend capabilities.
 
+## Important
+
+Please note that mollie implementation done, you can easily switch it to other payment gateway by changing the code in the `lib/mollie/index.ts` file. f.e. you can use `Stripe` or `Paypal` or `Klarna` or `Bank Transfer` etc.
+
+I will be implementing more payment gateways in the future.
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
