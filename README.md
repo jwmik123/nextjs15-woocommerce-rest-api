@@ -1,36 +1,145 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js 15 E-commerce Template with WooCommerce & WordPress
+
+A modern, high-performance e-commerce template built with Next.js 15, integrating WooCommerce REST API, WordPress GraphQL, and Mollie Payments. Perfect for businesses looking to combine the power of WordPress content management with Next.js frontend capabilities.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Features
+
+- **Next.js 15**: Utilizing the latest features including App Router, Server Components, and improved image optimization
+- **WordPress Integration**: Seamless content management through WordPress GraphQL API
+- **WooCommerce REST API**: Full e-commerce capabilities with product management, cart functionality, and order processing
+- **Mollie Payments**: Secure payment processing with support for multiple payment methods
+- **TypeScript**: Full type safety across the entire application
+- **Tailwind CSS**: Modern, responsive design with utility-first CSS
+- **Server-Side Rendering**: Optimized for SEO and performance
+- **Authentication**: JWT-based authentication with WordPress
+
+## Prerequisites
+
+- Node.js 18.17 or later
+- WordPress installation with WooCommerce plugin
+- WordPress GraphQL plugin
+- Mollie account and API keys
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/nextjs15-woo-wordpress-template
+cd nextjs15-woo-wordpress-template
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Configure environment variables:
+
+```bash
+cp .env.example .env.local
+```
+
+Edit `.env.local` with your WordPress, WooCommerce, and Mollie credentials:
+
+```
+WORDPRESS_API_URL=your-wordpress-graphql-endpoint
+WOOCOMMERCE_KEY=your-woocommerce-key
+WOOCOMMERCE_SECRET=your-woocommerce-secret
+MOLLIE_API_KEY=your-mollie-api-key
+```
+
+4. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Configuration
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### WordPress Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Install required plugins:
+   - WooCommerce
+   - WPGraphQL
+   - WPGraphQL for WooCommerce
+2. Enable REST API endpoints
+3. Configure CORS headers
 
-## Learn More
+### WooCommerce Configuration
 
-To learn more about Next.js, take a look at the following resources:
+1. Generate API keys in WooCommerce settings
+2. Configure shipping zones and tax rates
+3. Set up product categories and attributes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Mollie Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Create a Mollie account
+2. Configure webhook URLs
+3. Set up preferred payment methods
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+├── app/
+│   ├── api/
+│   ├── cart/
+│   ├── products/
+│   └── checkout/
+├── components/
+│   ├── cart/
+│   ├── products/
+│   └── checkout/
+├── lib/
+│   ├── wordpress/
+│   ├── woocommerce/
+│   └── mollie/
+└── types/
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details
+## Features in Detail
+
+- **Product Catalog**
+
+  - Dynamic product listing
+  - Advanced filtering and search
+  - Real-time inventory management
+
+- **Shopping Cart**
+
+  - Persistent cart state
+  - Dynamic pricing updates
+  - Multiple currency support
+
+- **Checkout Process**
+
+  - Multi-step checkout
+  - Address validation
+  - Order summary
+  - Multiple payment methods through Mollie
+
+- **User Account**
+  - Order history
+  - Saved addresses
+  - Wishlist functionality
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+
+For support, please open an issue in the GitHub repository or contact us at support@yourdomain.com.
+
+## Acknowledgments
+
+- Next.js team for the amazing framework
+- WordPress and WooCommerce communities
+- Mollie team for their excellent payment solutions
