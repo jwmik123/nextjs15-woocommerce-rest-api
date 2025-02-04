@@ -52,10 +52,12 @@ cp .env.example .env.local
 Edit `.env.local` with your WordPress, WooCommerce, and Mollie credentials:
 
 ```
-WORDPRESS_API_URL=your-wordpress-graphql-endpoint
-WOOCOMMERCE_KEY=your-woocommerce-key
-WOOCOMMERCE_SECRET=your-woocommerce-secret
-MOLLIE_API_KEY=your-mollie-api-key
+NEXT_PUBLIC_WORDPRESS_URL=
+NEXT_PUBLIC_WORDPRESS_API_URL=
+WC_CONSUMER_KEY=
+WC_CONSUMER_SECRET=
+MOLLIE_API_KEY=
+NEXT_PUBLIC_SITE_URL=
 ```
 
 4. Start the development server:
